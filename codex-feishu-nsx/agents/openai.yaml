@@ -1,0 +1,4 @@
+interface:
+  display_name: "Codex Feishu NSX"
+  short_description: "Connect Codex to Feishu with durable task recovery"
+  default_prompt: "Use $codex-feishu-nsx to configure or manage my Codex-to-Feishu bridge."
