@@ -1,0 +1,24 @@
+# Local dependencies and build caches
+**/node_modules/
+**/.pnpm-store/
+**/*.tsbuildinfo
+
+# Local bridge credentials and runtime state
+**/config.env
+**/data/
+**/logs/
+**/runtime/
+**/.codex-feishu-nsx-outbox/
+**/.codepilot-uploads/
+
+# Local backups and temporary files
+backups/
+*.tmp
+*.log
+*.pid
+*.lock
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/
