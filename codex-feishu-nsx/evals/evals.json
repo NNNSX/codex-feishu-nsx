@@ -1,0 +1,13 @@
+{
+  "skill_name": "codex-feishu-nsx",
+  "evals": [
+    {
+      "prompt": "帮我把本地 Codex 连接到飞书",
+      "expected_output": "Trigger setup, request only Feishu and Codex settings, and use CFN_* configuration keys."
+    },
+    {
+      "prompt": "飞书机器人没反应，帮我诊断",
+      "expected_output": "Run the Windows doctor script, inspect masked logs, and check Feishu long connection settings."
+    }
+  ]
+}
