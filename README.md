@@ -17,8 +17,8 @@
 
 ## 目录
 
-- `codex-feishu-nsx/`：Codex skill、daemon、配置、平台脚本和测试。
-- `codex-feishu-nsx-core/`：飞书适配器、桥接管理器、投递层、恢复任务和安全校验核心库。
+- `codex-feishu-nsx/`：完整、可独立安装的 Codex skill。
+- `codex-feishu-nsx/src/core/`：内置的飞书适配、消息投递、权限、恢复和安全模块；它不是另一个 skill。
 
 ## 使用方式
 
@@ -31,16 +31,12 @@
 ### 安装依赖与构建
 
 ```powershell
-cd codex-feishu-nsx-core
-npm install
-npm run build
-
-cd ..\codex-feishu-nsx
+cd codex-feishu-nsx
 npm install
 npm run release
 ```
 
-`npm run release` 会依次执行 core/app 类型检查、全部单元测试、core 同步和 daemon bundle 构建。
+`npm run release` 会依次执行统一类型检查、全部单元测试和 daemon bundle 构建。项目不依赖仓库外的本地 `file:` 包，因此该目录可以单独复制或安装。
 
 ### 配置
 
@@ -91,7 +87,7 @@ node codex-feishu-nsx/scripts/doctor.mjs
 
 ## 测试
 
-当前版本已验证：core 26 项测试、app 51 项测试、两套 TypeScript 类型检查和 release 构建全部通过。Windows + Feishu WebSocket 已做线上运行检查；macOS/Linux 服务脚本仍建议在对应主机上做一次安装验证。
+当前版本已验证：77 项测试、统一 TypeScript 类型检查和 release 构建全部通过。Windows + Feishu WebSocket 已做线上运行检查；macOS/Linux 服务脚本仍建议在对应主机上做一次安装验证。
 
 ## 源码致谢
 
@@ -104,8 +100,8 @@ node codex-feishu-nsx/scripts/doctor.mjs
 - `markdown-it`：Markdown 解析支持。
 - Node.js 官方测试运行器和 TypeScript 工具链。
 
-第三方依赖的许可证和版权信息以各自包内的 LICENSE 文件为准；本仓库根目录和两个子项目中的 MIT License 文件应与源码一并保留。
+第三方依赖的许可证和版权信息以各自包内的 LICENSE 文件为准；skill 目录中的 MIT License 应与源码一并保留。
 
 ## 许可证
 
-MIT License，详见 `codex-feishu-nsx/LICENSE` 和 `codex-feishu-nsx-core/LICENSE`。
+MIT License，详见 `codex-feishu-nsx/LICENSE`。
