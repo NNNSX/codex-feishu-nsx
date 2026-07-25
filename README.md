@@ -91,7 +91,9 @@ node codex-feishu-nsx/scripts/doctor.mjs
 
 ## 源码致谢
 
-本项目的桥接设计和实现建立在已有本地 Codex/IM bridge 工作的基础上，保留并遵循原始项目中的 MIT License 与版权声明。特别感谢原始 bridge 源码作者和社区贡献者提供的会话路由、消息适配、Markdown 渲染与恢复任务思路。
+本项目基于 [op7418/Claude-to-IM-skill](https://github.com/op7418/Claude-to-IM-skill) 的源码和设计进行裁剪与重构，形成只支持 Codex 和飞书的独立版本。感谢原作者 [op7418](https://github.com/op7418) 及上游社区贡献者提供的 IM bridge、会话路由、消息适配、Markdown 渲染和权限交互等基础实现。
+
+根据上游项目说明，`Claude-to-IM-skill` 的 IM bridge 模块来源于 [op7418/CodePilot](https://github.com/op7418/CodePilot)。本项目保留上游 MIT License 和 `Copyright (c) 2024-2025 op7418` 版权声明；本仓库后续针对 Codex、飞书、文件传输、任务恢复和跨平台运行所做的改造不改变上游代码的署名与许可要求。
 
 运行时依赖和相关工作还包括：
 
