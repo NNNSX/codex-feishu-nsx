@@ -12,6 +12,10 @@ await esbuild.build({
     // dist/cli.js relative to its own package location. Bundling it
     // breaks that path resolution.
     '@openai/codex-sdk',
+    // Keep package dependencies external so the daemon can be built from any checkout
+    // without embedding package-manager or local workspace paths in the bundle.
+    '@larksuiteoapi/node-sdk',
+    'markdown-it',
     // Node.js built-ins
     'fs', 'path', 'os', 'crypto', 'http', 'https', 'net', 'tls',
     'stream', 'events', 'url', 'util', 'child_process', 'worker_threads',
