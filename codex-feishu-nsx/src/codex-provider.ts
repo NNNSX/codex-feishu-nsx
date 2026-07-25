@@ -13,7 +13,7 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 
-import type { LLMProvider, StreamChatParams } from 'codex-feishu-nsx-core/src/lib/bridge/host.js';
+import type { LLMProvider, StreamChatParams } from './core/host.js';
 import { sseEvent } from './sse-utils.js';
 
 /** MIME → file extension for temp image files. */

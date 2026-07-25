@@ -21,8 +21,8 @@ import type {
   BridgeJobAttachment,
   BridgeJobRecord,
   BridgeJobState,
-} from 'codex-feishu-nsx-core/src/lib/bridge/host.js';
-import type { ChannelBinding, ChannelType, InboundMessage } from 'codex-feishu-nsx-core/src/lib/bridge/types.js';
+} from './core/host.js';
+import type { ChannelBinding, ChannelType, InboundMessage } from './core/types.js';
 import { CFN_HOME } from './config.js';
 
 const DATA_DIR = path.join(CFN_HOME, 'data');

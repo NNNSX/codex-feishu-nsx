@@ -4,9 +4,9 @@ import crypto from 'node:crypto';
 import fs from 'node:fs';
 import path from 'node:path';
 
-import { initBridgeContext } from 'codex-feishu-nsx-core/src/lib/bridge/context.js';
-import * as bridgeManager from 'codex-feishu-nsx-core/src/lib/bridge/bridge-manager.js';
-import 'codex-feishu-nsx-core/src/lib/bridge/adapters/index.js';
+import { initBridgeContext } from './core/context.js';
+import * as bridgeManager from './core/bridge-manager.js';
+import './core/adapters/index.js';
 
 import { CFN_HOME, configToSettings, loadConfig } from './config.js';
 import { CodexProvider } from './codex-provider.js';
